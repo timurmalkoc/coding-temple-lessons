@@ -138,6 +138,27 @@ a{
     list-style-type: none;
   }
 
+  .bar {
+    background-color: gray;
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    width: 40px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .buttom ul{
+    padding: 0;
+    list-style: none;
+  }
+
+    .new{
+        display: flex;
+        align-content: flex-start;
+
+    }
+
   /* for big screen, bigger than 420*/
   @media all and (min-width:420px){
     .login{
@@ -148,5 +169,8 @@ a{
     }
     .create-account{
         font-size: 14px;
+    }
+    .bar{
+        width: 140px;
     }
   }
