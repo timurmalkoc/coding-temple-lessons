@@ -1,0 +1,138 @@
+.container {  display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navigation navigation navigation"
+      "cover-img cover-img cover-img"
+      ". content ."
+      "buttom buttom buttom";
+      max-width: 100%;
+      padding: 0px;
+  }
+.container div{
+    margin: 0px;
+    padding: 0px;
+}  
+  .navigation { 
+    grid-area: navigation;
+    
+    }
+  .cover-img { grid-area: cover-img;    
+}
+  .cover-img img{
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .cover-img p{
+    margin-top: -32%;
+    font-size: 30px;
+    font-family: serif;
+    text-align: center;
+    color: white;
+  }
+
+  .content { grid-area: content; }
+  .buttom { grid-area: buttom; }
+ 
+  .cover-img img{
+    margin: 0px;
+    width: 100%;
+    height: auto;
+  }
+  .navbar{
+    background-color: black;
+  }
+  .navbar-brand{
+    margin-left: 50px;
+    font-size: 20px;
+
+  }
+
+  .date>p{
+    margin-top: 60px;
+    font-size: 10px;
+    font-family: serif;
+    border: 1px solid gray;
+    padding-left: 10px;
+    
+  }
+  .heading{
+    margin-top: 30px;
+  }
+  .event-details{
+    font-size: 10px;
+    font-family: serif;
+  }
+  @media (min-width: 768px){
+  .navbar-expand-md .navbar-nav {
+    margin-top: 15px;
+    align-content:flex-end;
+    margin-left: 5%;
+    width: 50%;
+    justify-content: space-around;
+    
+  }
+  #navbarTogglerDemo01 > a{ 
+    font-size: 35px;
+  }
+  .navbar-nav a{
+    font-size: 12px;
+  }
+  .nav-link{
+    padding-bottom: 0px;
+  }
+  #disable-btn{
+    color: black;
+  }
+  .cover-img p{
+    font-size: 80px;
+    margin-top: -32%;
+  }
+ 
+
+}
+
+@media (min-width: 1024px){
+
+    .cover-img p{
+        margin-top: -30%;
+        font-size: 100px;
+      }
+      #navbarTogglerDemo01 > a{ 
+        font-size: 40px;
+      }
+      .navbar-nav a{
+        font-size: 14px;
+      }
+}
+
+@media (min-width: 1440px){
+
+    .cover-img p{
+        margin-top: -30%;
+        font-size: 120px;
+      }
+      #navbarTogglerDemo01 > a{ 
+        font-size: 45px;
+      }
+      .navbar-nav a{
+        font-size: 16px;
+      }
+}
+
+@media (min-width: 2560px){
+
+    .cover-img p{
+        margin-top: -32%;
+        font-size: 220px;
+      }
+      #navbarTogglerDemo01 > a{ 
+        font-size: 80px;
+      }
+      .navbar-nav a{
+        font-size: 30px;
+      }
+}
