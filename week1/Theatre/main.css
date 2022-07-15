@@ -10,46 +10,61 @@
       max-width: 100%;
       padding: 0px;
   }
+
+  /* Remove sade padding and margin */
 .container div{
     margin: 0px;
     padding: 0px;
 }  
+
+/* Navbar Section -------------------------*/
+
   .navigation { 
     grid-area: navigation;
     
     }
+
+    .navbar{
+      background-color: black;
+    }
+    .navbar-brand{
+      margin-left: 50px;
+      font-size: 20px;
+  
+    }
+
+  /* Top image sectoion --------------------*/
   .cover-img { grid-area: cover-img;    
 }
-  .cover-img img{
+  .cover-img .image img{
     object-fit: cover;
     width: 100%;
-    z-index: -1;
   }
 
-  .cover-img p{
-    margin-top: -32%;
-    font-size: 30px;
-    font-family: serif;
-    text-align: center;
+  /* text over image */
+  .text{
+    position:relative;
+    top: -50%;
+    right: -25%;
     color: white;
+    font-size: 25px;
+    font-family: serif;
+    z-index: 10;
+    width: 60%;
+
   }
 
+  /* Event Section --------------------------*/
   .content { grid-area: content; }
  
   .cover-img img{
     margin: 0px;
   }
-  .navbar{
-    background-color: black;
-  }
-  .navbar-brand{
-    margin-left: 50px;
-    font-size: 20px;
-
-  }
+  
 
   .date>p{
-    margin-top: 60px;
+    position:static;
+    margin-top: -20px;
     font-size: 10px;
     font-family: serif;
     border: 1px solid gray;
@@ -74,6 +89,8 @@
     color:white;
     border: 1px black solid;
   }
+
+  /* Footer Section ------------------------------ */
   footer{
     background-color: black;
     color: white;
@@ -99,17 +116,22 @@
     margin-left: 50px;
   }
 
+
+
+  /* media Queries ------------------------- */
+
   @media (min-width: 375px){
-    .date>p{
-      margin-top: 80px;
-      font-size: 14px;}
+    .date>p{font-size: 14px;
+      margin-top: -40px;}
+    .text{font-size: 2em;}
   }
 
 
+
   @media (min-width: 425px){
-    .date>p{
-      margin-top: 90px;
-      font-size: 14px;}
+    .date>p{font-size: 14px;
+      margin-top: -40px;}
+    .text{font-size: 2.3em;}
   }
 
 
@@ -131,16 +153,10 @@
   .nav-link{
     padding-bottom: 0px;
   }
-  #disable-btn{
-    color: black;
-  }
-  .cover-img p{
-    font-size: 80px;
-    margin-top: -32%;
-  }
-  .date>p{
-    margin-top: 130px;
-    font-size: 18px;}
+
+  .date>p{font-size: 18px;
+    margin-top: -80px;}
+  .text{font-size: 4em;}
 
   .container-footer{
     padding-top: 50px;
@@ -152,24 +168,21 @@
   .map{
     width: 40%;
   }
-  .map img{
-    height: auto;
+  .map img{height: auto;}
+
+  [class^="title"]{text-align: left;}
+
+    [class^="sub"]{
+      text-align: left;
+      margin-left: 0px;
+    }  
+  .title-info{margin-left: -50px;
+  }
+  .sub-info{margin-left: -50px;}
 
 }
 
-[class^="title"]{
-  text-align: left;}
 
-  [class^="sub"]{
-    text-align: left;
-    margin-left: 0px;
-  }  
-.title-info{
-  margin-left: -50px;
-}
-.sub-info{
-  margin-left: -50px;
-}
 @media (min-width: 1024px){
 
     .cover-img p{
@@ -184,8 +197,10 @@
       }
 
       .date>p{
-        margin-top: 160px;
-        font-size: 18px;}
+        font-size: 18px;
+        margin-top: -110px;}
+
+      .text{font-size: 5.5em;}
 
       .event{
         display: flex;
@@ -213,10 +228,6 @@
 
 @media (min-width: 1440px){
 
-    .cover-img p{
-        margin-top: -30%;
-        font-size: 120px;
-      }
       #navbarTogglerDemo01 > a{ 
         font-size: 45px;
       }
@@ -225,8 +236,10 @@
       }
 
       .date>p{
-        margin-top: 250px;
-        font-size: 30px;}
+        font-size: 30px;
+        margin-top: -120px;}
+
+        .text{font-size: 7.5em;}
         .event p{
           font-size: 1.5em;
         }
@@ -248,10 +261,7 @@
 }
 
 @media (min-width: 2560px){
-    .cover-img p{
-        margin-top: -32%;
-        font-size: 220px;
-      }
+
       #navbarTogglerDemo01 > a{ 
         font-size: 80px;
       }
@@ -260,9 +270,10 @@
       }
 
       .date>p{
-        margin-top: 500px;
+        margin-top: -200px;
         font-size: 60px;
       }
+      .text{font-size: 14em;}
       .event p{
         font-size: 3em;
       }
